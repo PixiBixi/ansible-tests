@@ -1,0 +1,6 @@
+- name: Change sshd port
+  lineinfile:
+    dest: "/etc/ssh/sshd_config"
+    regexp: "^Port"
+    line: "Port 1998"
+  notify: "Restart sshd"

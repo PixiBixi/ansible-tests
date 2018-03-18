@@ -1,0 +1,7 @@
+- name: Install misc packages
+  copy:
+    src: /etc/ansible/src/ctop
+    dest: /usr/local/bin/ctop
+    owner: root
+    group: root
+    mode: 0755

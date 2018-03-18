@@ -1,0 +1,32 @@
+- name: Install list of packages
+    apt: name={{item}} state=installed update_cache=yes cache_valid_time=3600
+    with_items:
+      - molly-guard
+      - dfc
+      - htop
+      - strace
+      - unattended-upgrade
+      - iptraf
+      - tcpdump
+      - zsh
+      - git-core
+      - dstat
+      - lftp
+      - lvm2
+      - iperf3
+      - ethtool
+      - vim
+      - mtr
+      - curl
+      - dnsutils
+      - whois
+      - kexec-tools
+      - perl
+      - apt-file
+      - iotop
+      - ed
+      - ruby
+      - cpufrequtils
+      - screen
+      - btrfs-tools
+      - nload

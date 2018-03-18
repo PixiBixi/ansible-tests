@@ -1,0 +1,12 @@
+# Les handlers vont être exécutés que si une modification à un fichier a été apportée
+# Ceux-ci marchent de paire avec l'instruction "notify" se situant dans les tasks
+handlers:
+  name: "Restart SSH"
+  service:
+    name: sshd
+    state: restarted
+
+  name: "Restart nginx"
+  service:
+    name: nginx
+    state: restarted

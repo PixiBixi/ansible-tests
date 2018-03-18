@@ -1,0 +1,16 @@
+---
+- hosts: dbservers
+  vars:
+    email: mon@email.fr
+  vars_prompt:
+    - name: "dbrootpasswd"
+      prompt: "Database root password"
+   tasks:
+     - include: tasks/commonSetup.yml
+     - include: tasks/setupMonitoring.yml
+     - include: tasks/installMySQL.yml
+
+     # On peut mélanger taches normales et include
+     - name: Install htop
+       apt:
+         name: htop
