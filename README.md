@@ -10,9 +10,15 @@ Le fichier de configuration se trouve dans __/etc/ansible/ansible.cfg__
 pipelining=True
 ```
 
-  * Permet de réduire le nombre de connexions SSH nécéssaires. Augmente **grandement** la rapidité d'exécution
+  * Réduit le nombre de connexions SSH nécéssaires. Augmente **grandement** la rapidité d'exécution
 
     * Par défaut désactiver car certaines configurations nécessitant _requiretty_ posent problème
+
+```
+retry_files_enabled = False
+```
+
+  * Désactive la création de .retry lorsque la connexion à certains hosts échoue
 
 ## Sources
 
