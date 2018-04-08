@@ -2,6 +2,10 @@
 
 Ce repository contiendra mes playbooks ainsi que mes tests :-) 
 
+## Ansible Galaxy
+
+ansible-galaxy est le Hub Docker pour ansible. On y retrouve de nombreux playbooks 
+
 ## Optimisations
 
 Le fichier de configuration se trouve dans __/etc/ansible/ansible.cfg__
